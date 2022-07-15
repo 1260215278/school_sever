@@ -1,0 +1,620 @@
+{
+	"easycom": {
+		// 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+		// 下载安装方式
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+		// npm安装方式
+		// "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"condition": {
+		"current": 0,
+		"list": [{
+			"name": "test",
+			"path": "pages/phone-login/phone-login"
+		}]
+	},
+	"pages": [
+		// tabbar
+		{
+			"path": "pages/tabbar/home",
+			"style": {
+				// #ifdef H5
+				"pullToRefresh": {
+					"style": "circle",
+					"offset": "70px"
+				},
+				// #endif
+				"enablePullDownRefresh": true,
+				// #ifdef MP
+				"navigationStyle": "default",
+				// #endif
+				"navigationBarTitleText": "校园服务"
+			}
+		},
+		{
+			"path": "pages/tabbar/composite",
+			"style": {
+				// #ifdef MP
+				"navigationStyle": "default",
+				// #endif
+				"navigationBarTitleText": "校园综合"
+			}
+		},
+		{
+			"path": "pages/tabbar/dynamic",
+			"style": {
+				// #ifdef H5
+				"pullToRefresh": {
+					"style": "circle",
+					"offset": "70px"
+				},
+				// #endif
+				"enablePullDownRefresh": true,
+				// #ifdef MP
+				"navigationStyle": "default",
+				// #endif
+				"navigationBarTitleText": "校友圈"
+
+			}
+		},
+		{
+			"path": "pages/tabbar/order",
+			"style": {
+				// #ifdef H5
+				"pullToRefresh": {
+					"style": "circle",
+					"offset": "70px"
+				},
+				// #endif
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/tabbar/my",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		// 外卖订单详情
+		{
+			"path": "pages/order/takeout-order-details",
+			"style": {}
+		},
+		// 外卖订单评价
+		{
+			"path": "pages/order/takeout-order-evaluate",
+			"style": {}
+
+		},
+		// 生活订单详情
+		{
+			"path": "pages/order/life-order-details",
+			"style": {}
+		},
+		// 生活订单立即评价
+		{
+			"path": "pages/order/life-order-evaluate",
+			"style": {}
+		},
+		// 定位索引
+		{
+			"path": "pages/common/locate-index",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		// banner 详情
+		{
+			"path": "pages/common/banner-details",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
+		},
+
+		// 预览图片
+		{
+			"path": "pages/imgPreview/imgPreview",
+			"style": {}
+		}, {
+			"path": "pages/group/group",
+			"style": {
+				// #ifdef MP
+				"navigationStyle": "default",
+				// #endif
+				"navigationBarTitleText": "拼团"
+			}
+		},
+		{
+			"path": "pages/phone-login/phone-login",
+			"style": {}
+		},
+		{
+			"path": "pages/delivery/list",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/delivery/express-detail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/delivery/takeout-detail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"subPackages": [{
+			"root": "pages/home",
+			"pages": [
+				// home-search
+				{
+					"path": "home-search",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// home-category-search
+				{
+					"path": "home-category-search",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// 外卖分类列表
+				{
+					"path": "takeout",
+					"style": {}
+				},
+				// 外卖详情
+				{
+					"path": "takeout-details",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// 领取优惠券
+				{
+					"path": "home-coupons",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": true
+					}
+				},
+				// 分享
+				{
+					"path": "takeout-share",
+					"style": {}
+				},
+				// 外卖订单确认页
+				{
+					"path": "takeout-order-confirm",
+					"style": {}
+				},
+				// 外卖支付成功
+				{
+					"path": "takeout-pay-success",
+					"style": {}
+				},
+				// 生活列表
+				{
+					"path": "life",
+					"style": {}
+				},
+				// 生活详情
+				{
+					"path": "life-details",
+					"style": {}
+				},
+				// 生活订单确认
+				{
+					"path": "life-order-confirm",
+					"style": {}
+				},
+				// 生活订单支付成功
+				{
+					"path": "life-pay-success",
+					"style": {}
+				},
+				{
+					"path": "food-details",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/composite",
+			"pages": [
+				// 综合
+				{
+					"path": "composite-search",
+					"style": {}
+				},
+				{
+					"path": "used-idle",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"enablePullDownRefresh": true
+					}
+				},
+				// 闲置详情
+				{
+					"path": "used-idle-details",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"enablePullDownRefresh": true
+					}
+				},
+				// 失物招领
+				{
+					"path": "lost-property",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": true
+					}
+				},
+				// 综合-代取快递
+				{
+					"path": "behalf",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": true
+					}
+				},
+				// 综合-驾校报名
+				{
+					"path": "driving",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": true
+					}
+				},
+				// 驾校详情
+				{
+					"path": "driving-details",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"navigationStyle": "default"
+					}
+				},
+				// 驾校立即报名
+				{
+					"path": "driving-sign",
+					"stlye": {}
+				},
+				// 报名成功
+				{
+					"path": "driving-sign-success",
+					"style": {}
+				},
+				// 我的闲置发布需求
+				{
+					"path": "used-idle-issue",
+					"style": {}
+				},
+				// 发布 帮取快递
+				{
+					"path": "behalf-issue",
+					"style": {}
+				},
+				// 发布 帮取快递 成功页面
+				{
+					"path": "behalf-issue-success",
+					"styo": {}
+				},
+				// 发布 失物招领
+				{
+					"path": "lost-property-issue",
+					"style": {}
+				},
+				{
+					"path": "education",
+					"style": {}
+				}, {
+					"path": "organization",
+					"style": {}
+				}, {
+					"path": "organization-detail",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}, {
+					"path": "organ-confirm-order",
+					"style": {}
+				}, {
+					"path": "education-banner-detail",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"navigationStyle": "default"
+					}
+				}, {
+					"path": "select-city",
+					"style": {
+						"navigationBarTitleText": "选择城市",
+						"navigationStyle": "default"
+					}
+				}, {
+					"path": "organization-class-detail",
+					"style": {}
+				}, {
+					"path": "organization-agreement",
+					"style": {}
+				}, {
+					"path": "organization-add-remark",
+					"style": {}
+				}, {
+					"path": "driving-class-detail",
+					"style": {}
+				}
+			]
+		},
+		{
+			"root": "pages/dynamic",
+			"pages": [
+				// 动态详情
+				{
+					"path": "dynamic-details",
+					"style": {
+						"navigationBarTitleText": "详情",
+						"navigationStyle": "default"
+					}
+				},
+				// 动态发布
+				{
+					"path": "dynamic-issue",
+					"style": {}
+				},
+				// 动态新闻详情
+				{
+					"path": "dynamic-new-details",
+					"style": {
+						// #ifdef MP
+						"navigationStyle": "default",
+						// #endif
+						"navigationBarTitleText": "详情"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/my",
+			"pages": [
+				// 我的 使用说明
+				{
+					"path": "instruction",
+					"style": {}
+				},
+				// 关于我们
+				{
+					"path": "about",
+					"style": {}
+				},
+				// 我的消息
+				{
+					"path": "my-msg",
+					"style": {}
+				},
+				// 我的动态
+				{
+					"path": "my-dynamic",
+					"style": {}
+				},
+				// 我的 二手闲置
+				{
+					"path": "my-used-idle",
+					"style": {}
+				},
+				// 我的 失物招领
+				{
+					"path": "my-lost",
+					"style": {}
+				},
+				// 我的 帮取快递 订单列表
+				{
+					"path": "behalf-order",
+					"style": {
+						// #ifdef H5
+						"pullToRefresh": {
+							"style": "circle",
+							"offset": "70px"
+						},
+						// #endif
+						"enablePullDownRefresh": true
+					}
+				},
+				// 我的 帮取快递 订单详情
+				{
+					"path": "behalf-order-details",
+					"style": {}
+				},
+				// 优惠券
+				{
+					"path": "my-coupons",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// 申请成为配送员
+				{
+					"path": "apply-courier",
+					"style": {}
+				},
+				// 我的 驾校报名
+				{
+					"path": "my-driving-list",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// 我的 驾校报名 详情
+				{
+					"path": "my-driving-details",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				// 我的 个人资料
+				{
+					"path": "userinfo",
+					"style": {}
+				},
+				// 我的 地址
+				{
+					"path": "address-edit",
+					"style": {}
+				},
+				// 我的 修改手机号码
+				{
+					"path": "modify-phone",
+					"style": {}
+				},
+				// 我的 收货地址
+				{
+					"path": "address",
+					"style": {}
+				},
+				// 我的 收藏
+				{
+					"path": "my-collections",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "education-order",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}, {
+					"path": "education-detail",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				}, {
+					"path": "ivite-detail",
+					"style": {}
+				}
+			    ,{
+                    "path" : "wallet",
+                    "style":{
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": false
+					}
+                
+                }
+                ,{
+                    "path" : "withdraw",
+                    "style" :                                                                                    
+					{
+						"navigationStyle": "custom",
+						"enablePullDownRefresh": false
+					}
+                
+                }
+            ]
+		}
+	],
+	"preloadRule": {
+		"pages/tabbar/home": {
+			"network": "all",
+			"packages": ["pages/home", "pages/composite", "pages/dynamic", "pages/composite", "pages/my"]
+		}
+		// "pages/tabbar/composite": {
+		// 	"network": "all",
+		// 	"packages": ["pages/composite", "pages/dynamic"]
+		// },
+		// "pages/tabbar/dynamic": {
+		// 	"network": "all",
+		// 	"packages": ["pages/dynamic", "pages/composite"]
+		// },
+		// "pages/tabbar/my": {
+		// 	"network":"all",
+		// 	"packages": ["pages/my"]
+		// }
+	},
+	"globalStyle": {
+		"mp-alipay": {
+			/* 支付宝小程序特有相关 */
+			"transparentTitle": "always",
+			"allowsBounceVertical": "NO"
+		},
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarTitleText": "龙子派",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#26D499",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			"pagePath": "pages/tabbar/home",
+			"iconPath": "static/tabbar/tabbar_home.png",
+			"selectedIconPath": "static/tabbar/tabbar_home_hl.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/tabbar/composite",
+			"iconPath": "static/tabbar/tabbar_composite.png",
+			"selectedIconPath": "static/tabbar/tabbar_composite_hl.png",
+			"text": "综合"
+		}, {
+			"pagePath": "pages/tabbar/dynamic",
+			"iconPath": "static/tabbar/tabbar_dynamic.png",
+			"selectedIconPath": "static/tabbar/tabbar_dynamic_hl.png",
+			"text": "校友圈"
+		}, {
+			"pagePath": "pages/tabbar/order",
+			"iconPath": "static/tabbar/tabbar_order.png",
+			"selectedIconPath": "static/tabbar/tabbar_order_hl.png",
+			"text": "订单"
+		}, {
+			"pagePath": "pages/tabbar/my",
+			"iconPath": "static/tabbar/tabbar_my.png",
+			"selectedIconPath": "static/tabbar/tabbar_my_hl.png",
+			"text": "我的"
+		}]
+	},
+	"usingComponts": true
+}
